@@ -34,7 +34,6 @@
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  	&kp CAPS   &kp C_PP &kp N  	&kp M    &kp COMMA &kp DOT &kp FSLH &kp END
                         &kp LGUI &kp LALT &mo 1	  &kp SPACE  &kp RET	&mo 2 	&kp BSPC &kp CAPS
 			>;
-
 			sensor-bindings = <&msc_encoder SCRL_LEFT SCRL_RIGHT>, <&msc_encoder SCRL_DOWN SCRL_UP>;
 		};
 
@@ -51,7 +50,6 @@
 &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &bt BT_CLR &trans &trans &trans &trans &trans &trans
                                 &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans &trans    				&trans &trans &trans &trans
 			>;
-
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&rgb_encoder RGB_HUD RGB_HUI>;
 		};
 
@@ -69,7 +67,6 @@
 &trans    &trans &trans &trans  &trans  &trans  &trans &trans &kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp PSCRN
                         &trans  &trans  &trans  &trans &studio_unlock &trans    &trans    	&trans
 			>;
-
 			sensor-bindings = <&rgb_encoder RGB_BRD RGB_BRI>, <&rgb_encoder RGB_SAD RGB_SAI>;
 		};
 	};
