@@ -45,6 +45,7 @@
 // |       |     |     |      |      |      |                   |  ?   |  _    |  +    |  {   |   }   |  "|"  |
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
+			bindings = <
 &kp GRAVE       &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PRCNT                     	&kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp TILDE
 &trans          &trans          &trans          &trans          &trans          &trans                     	&kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp BSLH
 &trans          &trans          &trans          &trans          &trans          &trans                     	&kp QMARK &kp UNDER &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE
