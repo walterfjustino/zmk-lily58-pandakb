@@ -19,12 +19,6 @@
 
 / {
 	behaviors {
-        rgb_encoder: rgb_encoder {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
         rot_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -66,7 +60,7 @@
 &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &bt BT_CLR &trans &trans &trans &trans &trans &trans
                                 &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans &trans    				&trans &trans &trans &trans
 			>;
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&rgb_encoder RGB_HUD RGB_HUI>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&rot_kp RGB_HUD RGB_HUI>;
 		};
 
 		raise_layer {
@@ -83,7 +77,7 @@
 &trans    &trans &trans &trans  &trans  &trans  &trans &trans &kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp PSCRN
                         &trans  &trans  &trans  &trans &studio_unlock &trans    &trans    	&trans
 			>;
-			sensor-bindings = <&rgb_encoder RGB_BRD RGB_BRI>, <&rgb_encoder RGB_SAD RGB_SAI>;
+			sensor-bindings = <&rot_kp RGB_BRD RGB_BRI>, <&rot_kp RGB_SAD RGB_SAI>;
 		};
 	};
 };
