@@ -93,7 +93,7 @@
 &trans    &trans &trans &trans  &trans  &trans  &trans &trans &kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp PSCRN
                         &trans  &trans  &trans  &trans &studio_unlock &trans    &trans    	&trans
 			>;
-			sensor-bindings = <&gb_encoder_bri_brd>, <&rgb_encoder_sad_sai>;
+			sensor-bindings = <&rgb_encoder_bri_brd>, <&rgb_encoder_sad_sai>;
 		};
 	};
 };
