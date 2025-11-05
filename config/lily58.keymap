@@ -23,19 +23,19 @@
 
 / {
 	behaviors {
-        rgb_encoder_bri_brd: rgb_encoder {
+        rgb_encoder_bri_brd: rgb_encoder_bri_brd {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-		rgb_encoder_hud_hui: rgb_encoder {
+		rgb_encoder_hud_hui: rgb_encoder_hud_hui {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
         };
 
-		rgb_encoder_sad_sai: rgb_encoder {
+		rgb_encoder_sad_sai: rgb_encoder_sad_sai {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAD>, <&rgb_ug RGB_SAI>;
