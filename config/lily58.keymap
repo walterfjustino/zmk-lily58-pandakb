@@ -64,17 +64,17 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &   |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |  "   |                   |  -   |  +   |  =    |  [   |   ]   |   \   |
-// |       |     |     |      |      |  '   |                   |  ?   |  _   |  +    |  {   |   }   |  "|"  |
-// |       |     |     |      |      |      |        |  |       |      |      |       |  <   |   >   |       |
-//                     |      |      |      |        |  |       |      | RALT |       |
+// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &   |  *   |  (   |   )   |   ~   |
+// |       |     |     |      |      |  "   |                   |  -   |  +   |  =   |  [   |   ]   |   \   |
+// |       |     |     |      |      |  '   |                   |  ?   |  _   |  `   |  {   |   }   |  "|"  |
+// |       |     |     |      |      |      |        |  |       |      |      |      |  <   |   >   |  RALT |
+//                     |      |      |      |        |  |       |      |      |      |
 			bindings = <
 &kp GRAVE       &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PRCNT                   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp TILDE
 &trans          &trans          &trans          &trans          &trans          &kp DQT                     	&kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp BSLH
-&trans          &trans          &trans          &trans          &trans          &kp SQT                     	&kp QMARK &kp UNDER &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE
-&rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &bt BT_CLR &trans &trans &trans &kp LT &kp GT &trans
-                                &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans &trans    				&trans &trans &kp RALT &trans
+&trans          &trans          &trans          &trans          &trans          &kp SQT                     	&kp QMARK &kp UNDER &kp GRAVE &kp LBRC &kp RBRC &kp PIPE
+&rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &bt BT_CLR &trans &trans &trans &kp LT &kp GT &kp RALT
+                                &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans &trans    				&trans &trans &trans &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&rgb_encoder_hud_hui>;
 		};
