@@ -50,31 +50,31 @@
 // |  ESC  |  1  |  2  |  3   |  4     |  5    |                   |  6    |  7    |  8    |  9   |   0   | INS   |
 // |  TAB  |  Q  |  W  |  E   |  R     |  T    |                   |  Y    |  U    |  I    |  O   |   P   | DEL   |
 // | SHIFT |  A  |  S  |  D   |  F     |  G    |                   |  H    |  J    |  K    |  L   |   ;   | HOME  |
-// | CTRL  |  Z  |  X  |  C   |  V     |  B    | "CAPS" |  |  "]"  |  N    |  M    |  ,    |  .   |   /   | END   |
+// | CTRL  |  Z  |  X  |  C   |  V     |  B    |        |  |       |  N    |  M    |  ,    |  .   |   /   | END   |
 //                     | GUI  |  ALT   | LOWER | SPACE  |  | ENTER | RAISE |  BSPC | CAPS  |
 			bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     	&kp N6 	&kp N7   &kp N8    &kp N9  &kp N0   &kp INS
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                     	&kp Y  	&kp U    &kp I     &kp O   &kp P    &kp DEL
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                     	&kp H  	&kp J    &kp K     &kp L   &kp SEMI &kp HOME
-&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  	&kp CAPS   &kp C_PP &kp N  	&kp M    &kp COMMA &kp DOT &kp FSLH &kp END
-                        &kp LGUI &kp LALT &mo 1	  &kp SPACE  &kp RET	&mo 2 	&kp BSPC &kp CAPS
+&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &trans        &trans   &kp N  	&kp M    &kp COMMA &kp DOT &kp FSLH &kp END
+                        &kp LGUI &kp LALT &mo 1	 &kp SPACE     &kp RET	&mo 2 	&kp BSPC &kp CAPS
 			>;
 			sensor-bindings = <&inc_dec_kp LEFT RIGHT>, <&inc_dec_kp PG_UP PAGE_DOWN>;
 		};
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &   |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |  "   |                   |  -   |  +   |  =    |  [   |   ]   |   \   |
-// |       |     |     |      |      |  '   |                   |  ?   |  _   |  +    |  {   |   }   |  "|"  |
-// |       |     |     |      |      |      |        |  |       |      |      |       |  <   |   >   |       |
-//                     |      |      |      |        |  |       |      | RALT |       |
+// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &   |  *   |  (   |   )   |   ~   |
+// |       |     |     |      |  `   |  "   |                   |  -   |  +   |  =   |  [   |   ]   |   \   |
+// |       |     |     |      |      |  '   |                   |  ?   |  _   |      |  {   |   }   |  "|"  |
+// |       |     |     |      |      |      |        |  |       |      |      |      |  <   |   >   |  RALT |
+//                     |      |      |      |        |  |       |      |      |      |
 			bindings = <
-&kp GRAVE       &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PRCNT                   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp TILDE
-&trans          &trans          &trans          &trans          &trans          &kp DQT                     	&kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp BSLH
-&trans          &trans          &trans          &trans          &trans          &kp SQT                     	&kp QMARK &kp UNDER &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE
-&rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &bt BT_CLR &trans &trans &trans &kp LT &kp GT &trans
-                                &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans &trans    				&trans &trans &kp RALT &trans
+&kp GRAVE       &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PRCNT                             &kp CARET    &kp AMPS       &kp KP_MULTIPLY &kp LPAR     &kp RPAR      &kp TILDE
+&trans          &trans          &trans          &trans          &kp GRAVE       &kp DQT                               &kp MINUS    &kp KP_PLUS    &kp EQUAL       &kp LBKT     &kp RBKT      &kp BSLH
+&trans          &trans          &trans          &trans          &trans          &kp SQT                               &kp QMARK    &kp UNDER      &trans      	  &kp LBRC     &kp RBRC      &kp PIPE
+&rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF	&ext_power EP_ON  &trans     &trans   &trans       &trans         &trans          &kp LT       &kp GT        &kp RALT
+                                                &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans            &trans     &trans   &trans       &trans         &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&rgb_encoder_hud_hui>;
 		};
@@ -87,11 +87,11 @@
 // |      |      |      |      |      |       |        |  |       |      |       |       |      |       | PSCRN |
 //                      |      |      |       | STUD_UNLOCK | |   |      |       |       |
 			bindings = <
-&kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6           	 &kp F7    &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
-&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &trans    &trans    &kp UP    &trans    &trans   &kp PG_UP
-&trans    &trans &trans &trans  &trans  &out OUT_TOG                &trans  &kp LEFT  	&kp DOWN    &kp RIGHT    &trans    &kp PG_DN
-&trans    &trans &trans &trans  &trans  &trans  &trans &trans &kp MINUS &kp KP_PLUS &kp EQUAL &kp LBKT 	&kp RBKT &kp PSCRN
-                        &trans  &trans  &trans  &trans &studio_unlock &trans    &trans    	&trans
+&kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6           	                    &kp F7   &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
+&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR                             &trans   &trans    &kp UP    &trans     &trans   &kp PG_UP
+&trans       &trans       &trans       &trans       &trans       &out OUT_TOG                           &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &kp PG_DN
+&trans       &trans       &trans       &trans       &trans       &trans       &trans           &trans   &trans   &trans    &trans    &trans 	&trans   &kp PSCRN
+                                       &trans       &trans       &trans       &studio_unlock   &trans   &trans   &trans    &trans
 			>;
 			sensor-bindings = <&rgb_encoder_bri_brd>, <&rgb_encoder_sad_sai>;
 		};
